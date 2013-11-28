@@ -5,25 +5,34 @@ public class CheckNumberType {
 	public static void main(String[] args) {
 		
 		System.out.println(isComplex("309+432i"));
-		
+	    String[] attempts = new String[]{"300+400i", "4i+2", "5000-324i", "555", "2i"};
+	    String s[] = "300-400i".split("[\\Q+-\\Ei]");
+
+	    System.out.println(s[0]+" "+s[1]); //prints 300 400
 //		System.out.println(isComposite(7));
 //		System.out.println(isPrime(0));
 //		System.out.println(isNatural(1));
 	}
 	
+	public static boolean isInteger(long n){
+		return true;
+	}
+	
+
+	//TODO Complete
 	public static boolean isComplex(String str) {
-		
 		try{
 			Long.parseLong(str);
-		}catch (Exception e) {
 			return false;
+		}catch (Exception e) {
+
+			System.out.println(str);
+			System.out.println(str.substring(0, str.indexOf('+')));
+			System.out.println(str.substring(str.indexOf('+')+1,str.indexOf("i")));
+			//String s[] = "300-400i".split("[\\Q+-\\Ei]");
+			//System.out.println(s[0]+" "+s[1]); //prints 300 400
+			return true;
 		}
-		
-		
-		System.out.println(str);
-		System.out.println(str.substring(0, str.indexOf('+')));
-		System.out.println(str.substring(str.indexOf('+')+1,str.indexOf("i")));
-		return true;
 	}
 	public static boolean isPrime(long n) {
 	    if(n < 2) return false;
@@ -58,7 +67,23 @@ public class CheckNumberType {
 		}
 	}
 	
-	public static boolean isIntegerFromString(String s) {
+	public static boolean isWhole(String s){		
+	    try { 
+	        long n = Long.parseLong(s); 
+	        if(n>=0){
+				return true;
+			}
+			else{
+				return false;
+			}
+	    } catch(NumberFormatException e) { 
+	        return false; 
+	    }
+		
+		
+	}
+	
+	public static boolean isInteger(String s) {
 	    try { 
 	        Integer.parseInt(s); 
 	    } catch(NumberFormatException e) { 

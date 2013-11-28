@@ -1,4 +1,4 @@
-package com.felix.math.master;
+package com.felix.math.prince.numtypes;
 
 import java.util.Random;
 

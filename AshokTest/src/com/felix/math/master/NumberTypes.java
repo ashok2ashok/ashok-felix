@@ -4,8 +4,8 @@ public enum NumberTypes {
 	PRIME,
 	COMPOSITE,
 	WHOLE,
-	COMPLEX,
-	INTEGER,
+	COMPLEX,//PENDING
+	INTEGER,//Pending
 	REAL,
 	NATURAL,
 	NEGATIVE,
