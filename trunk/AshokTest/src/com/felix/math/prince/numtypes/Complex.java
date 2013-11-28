@@ -1,4 +1,4 @@
-package com.felix.math.master;
+package com.felix.math.prince.numtypes;
 /*************************************************************************
  *  Compilation:  javac Complex.java
  *  Execution:    java Complex
