@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<!DOCTYPE resource-action-mapping PUBLIC "-//Liferay//DTD Resource Action Mapping 6.2.0//EN" "http://www.liferay.com/dtd/liferay-resource-action-mapping_6_2_0.dtd">
+
+<resource-action-mapping>
+	<portlet-resource>
+		<portlet-name>bookCatalog</portlet-name>
+		<permissions>
+			<supports>
+				<action-key>ADD_BOOK_BUTTON</action-key>
+				<action-key>VIEW_BOOK_LIST</action-key>
+			</supports>
+			<site-member-defaults>
+				<action-key>VIEW_BOOK_LIST</action-key>
+			</site-member-defaults>
+			<guest-defaults>
+				<action-key>VIEW_BOOK_LIST</action-key>
+			</guest-defaults>
+			<guest-unsupported />
+		</permissions>
+	</portlet-resource>
+	<model-resource>
+		<model-name>chapter08.code.listing.domain.Book</model-name>
+		<portlet-ref>
+			<portlet-name>bookCatalog</portlet-name>
+		</portlet-ref>
+		<permissions>
+			<supports>
+				<action-key>EDIT_BOOK</action-key>
+				<action-key>DELETE_BOOK</action-key>
+			</supports>
+			<site-member-defaults>
+				<!-- <action-key>EDIT_BOOK</action-key> -->
+			</site-member-defaults>
+			<guest-defaults>
+				<!-- <action-key>EDIT_BOOK</action-key> -->
+			</guest-defaults>
+			<guest-unsupported>
+				<!-- <action-key>DELETE_BOOK</action-key> -->
+			</guest-unsupported>
+			<owner-defaults>
+				<action-key>EDIT_BOOK</action-key>
+				<action-key>DELETE_BOOK</action-key>
+			</owner-defaults>
+		</permissions>
+	</model-resource>
+</resource-action-mapping>
